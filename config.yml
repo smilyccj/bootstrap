@@ -17,8 +17,17 @@ enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
-blackfriday:
-  fractions:            false
+outputFormats:
+  OpenSearch:
+    baseName:           opensearch
+    isPlainText:        true
+    mediaType:          application/xml
+    notAlternative:     true
+
+outputs:
+  home:
+    - HTML
+    - OpenSearch
 
 publishDir:             "_gh_pages"
 
